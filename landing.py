@@ -3,6 +3,8 @@ from pages.admin import admin_dashboard
 from pages.login import admin_login
 from pages.signup import admin_signup
 
+st.set_page_config(page_title="qentryy", page_icon="📍", layout="wide")
+
 # Initialize session state for page navigation if it doesn't exist
 if 'current_page' not in st.session_state:
     st.session_state.current_page = "Home"
@@ -148,7 +150,7 @@ def home():
         </div>
         """, unsafe_allow_html=True)
         if st.button("Go to Signup", key="signup_btn"):
-            set_page("Admin Signup")
+            st.switch_page("pages/signup.py")
     
     with col2:
         st.markdown("""
