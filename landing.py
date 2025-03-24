@@ -138,42 +138,6 @@ def home():
     </div>
     """, unsafe_allow_html=True)
     
-    # Navigation cards with buttons
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        st.markdown("""
-        <div class="card">
-            <div class="card-icon">👤</div>
-            <h3>Admin Signup</h3>
-            <p>Create a new admin account to manage visitors</p>
-        </div>
-        """, unsafe_allow_html=True)
-        if st.button("Go to Signup", key="signup_btn"):
-            st.switch_page("pages/signup.py")
-    
-    with col2:
-        st.markdown("""
-        <div class="card">
-            <div class="card-icon">🔑</div>
-            <h3>Admin Login</h3>
-            <p>Access your dashboard to approve or reject visitors</p>
-        </div>
-        """, unsafe_allow_html=True)
-        if st.button("Go to Login", key="login_btn"):
-            set_page("Admin Login")
-    
-    with col3:
-        st.markdown("""
-        <div class="card">
-            <div class="card-icon">📊</div>
-            <h3>Admin Dashboard</h3>
-            <p>View and manage all visitor requests</p>
-        </div>
-        """, unsafe_allow_html=True)
-        if st.button("Go to Dashboard", key="dashboard_btn"):
-            set_page("Admin Dashboard")
-    
     st.markdown("""
     <div class="footer">
         <p>© 2023 Visitor Management System. All rights reserved.</p>
